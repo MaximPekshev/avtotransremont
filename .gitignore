@@ -10,3 +10,4 @@ tmp
 files
 venv
 static
+baseapp/templates/baseapp/category
