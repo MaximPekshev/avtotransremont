@@ -1,0 +1,105 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}{% if page.meta_title %}{{ page.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if page.meta_description %}{{ page.meta_description }}{% else %}{% endif %}{% endblock %}
+
+{% block content %}
+<section class="page-banner" style="background-image:url({% static 'images/banners/background_banner.jpg' %});">
+    <div class="auto-container">
+       <div class="page-title"><h1>Контакты</h1></div>
+       <div class="bread-crumb text-right">
+           <span class="current">Контакты</span>
+       </div>
+   </div>
+</section>
+<!-- Sidebar Page -->
+<div class="sidebar-page">
+    <div class="auto-container">
+        <div class="row clearfix">
+            
+            <!-- Left Content -->
+            <section class="left-content col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                        
+                    <div class="sec-title"><h3 class="skew-lines">Свяжитесь с нами</h3></div>
+                    
+                    <!--Contact Form-->
+                    <div>
+                        <div class="row clearfix">
+                            
+                            <div class="col-md-5 col-sm-12 col-xs-12">
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Ваше имя</label>
+                                    <input type="text" name="username" value="" placeholder="Введите ваше имя">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Телефон</label>
+                                    <input type="text" name="phone" value="" placeholder="Введите Ваш телефон">
+                                </div>
+                                
+                                <div class="clearfix"></div>
+                                
+                            </div>
+                            
+                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Сообщение</label>
+                                    <textarea name="message" placeholder="Место для вашего сообщения"></textarea>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="form-group text-right">
+                            <button  class="theme-btn dark-btn hvr-bounce-to-right"><span class="fa fa-envelope"></span>Отправить</button>
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+                
+            </section>
+
+            <!-- Side Bar -->
+            <aside class="side-bar col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                    
+                
+                <!-- Contact Info -->
+                <div class="widget cont-info">
+                    <div class="sec-title"><h3 class="skew-lines">Контакты</h3></div>
+                    <div class="cont-box">
+                        {% comment %} <div class="text"></div> {% endcomment %}
+                        <ul class="info">
+                            <li><strong>Телефон</strong><a href="tel:+79192692177">+7(919) 269 2177</a></li>
+                            <li><strong>Телефон</strong><a href="tel:+79193051088">+7(919) 305 1088</a></li>
+                            <li><strong>Телефон</strong><a href="tel:+79197484001">+7(919) 748 4001</a></li>
+                            <li><strong>Телефон</strong><a href="tel:+74862484001">+7(4862) 48 40 01</a></li>
+                            <li><strong>Email</strong> <a href="mailto:avtotransremont@yandex.ru">avtotransremont@yandex.ru</a></li>        
+                            {% comment %} <li><strong>Website</strong> <a href="https://autotransremont.ru">autotransremont.ru</a></li> {% endcomment %}
+                        </ul>
+                    </div>
+                    
+                </div>
+            
+            
+            </aside>
+        
+        </div>
+    </div>
+    
+    
+</div>
+
+
+{% endblock %}
+

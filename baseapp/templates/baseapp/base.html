@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{% endblock %}">
+		<meta name="keywords" content="{% block keywords %}{% endblock %}" />
+        <!-- Stylesheets -->
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'css/revolution-slider.css' %}" rel="stylesheet">
+        <link href="{% static 'css/owl.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+        <!-- Responsive -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    </head>
+
+    <body>
+        <div class="page-wrapper">
+        
+            <!-- Preloader -->
+            <div class="preloader"></div>
+            
+            <!-- Main Header -->
+            <header class="main-header">
+                <div class="header-top">
+                
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                            <!--Logo-->
+                            <div class="col-md-3 col-sm-3 col-xs-12 logo"><a href="{% url 'show_index_page' %}"><img src="{% static 'images/logo.png' %}" alt="Carshire" title="Carshire"></a></div>
+                            
+                            <div class="col-lg-7 col-md-7 col-sm-10 header-top-infos pull-right">
+                                <ul class="clearfix">
+                                    <li>
+                                        <div class="clearfix ">
+                                            <img src="{% static 'images/icons/header-phone.png' %}" alt="">
+                                            <p>
+                                                <a href="tel:+79192692177">+7(919) 269 2177</a><br>
+                                                <a href="tel:+79193051088">+7(919) 305 1088</a><br>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="clearfix ">
+                                            <img src="{% static 'images/icons/header-phone.png' %}" alt="">
+                                            <p>
+                                                <a href="tel:+79197484001">+7(919) 748 4001</a><br>
+                                                <a href="tel:+74862484001">+7(4862) 48 40 01</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="clearfix ">
+                                            <img src="{% static 'images/icons/header-timer.png' %}" alt="">
+                                            <p>г. Орёл Новосельское<br> шоссе 11 офис 1</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!--Header Lower-->
+                <div class="header-lower">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                            <!--Main Menu-->
+                            <nav class="col-md-9 col-sm-12 col-xs-12 main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->      
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                
+                                <div class="navbar-collapse collapse clearfix">                                                                                              
+                                    <ul class="navigation">
+                                        <li class="current"><a href="{% url 'show_index_page' %}">Главная</a></li>
+                                        <li><a href="{% url 'show_about_us' %}">О нас</a></li>
+                                        {% if categories %}
+                                        <li class="dropdown"><a onclick="PreventDefault()">Услуги</a>
+                                            <ul class="submenu">
+                                                {% for item in categories %}
+                                                <li><a href="{% url 'show_category' cpu_slug=item.cpu_slug %}">{{ item.title }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        {% endif %}
+                                        <li><a href="{% url 'show_contacts' %}">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <!--Main Menu End-->
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--End Main Header -->
+
+            {% block content %}
+
+            {% endblock %}
+            <div class="sidebar-page" style="padding-top: 0px;">
+                <div class="auto-container">
+                    <section class="map-location">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A988df9023b6c32ed748eafefccaa4227a491228680e46d558616d3a419115177&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>           
+                    </section>
+                </div>
+            </div>
+            <!--Main Footer-->
+            <footer class="main-footer">
+                <!--Footer Upper-->
+                <div class="footer-upper">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                            
+                            <!--Footer Widget-->
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="footer-widget contact-widget">
+                                    <h3>Контакты</h3>
+                                    {% comment %} <div class="text">If you are in the middle of something and you don’t want to miss that important call that could be the start of an exciting new business.</div> {% endcomment %}
+                                    <ul class="info">
+                                        <li><strong>Email</strong> <a href="mailto:avtotransremont@yandex.ru">avtotransremont@yandex.ru</a></li>        
+                                        <li><strong>Телефон</strong><a href="tel:+79192692177">+7(919) 269 2177</a></li>
+                                        <li><strong>Телефон</strong><a href="tel:+79193051088">+7(919) 305 1088</a></li>
+                                        <li><strong>Телефон</strong><a href="tel:+79197484001">+7(919) 748 4001</a></li>
+                                        <li><strong>Телефон</strong><a href="tel:+74862484001">+7(4862) 48 40 01</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Widget-->
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="footer-widget services-widget">
+                                    {% if categories %}<h3>Наши услуги</h3>{% endif %}
+                                    <ul class="links">
+                                        {% if categories_1 %}
+                                        {% for item in categories_1 %}
+                                        <li><a href="{% url 'show_category' cpu_slug=item.cpu_slug %}"><i class="fa fa-check-circle"></i>{{ item.title }}</a></li>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Widget-->
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="footer-widget support-widget">
+                                    {% comment %} <h3>Our Support</h3> {% endcomment %}
+                                    <ul class="links">
+                                        {% if categories_2 %}
+                                        {% for item in categories_2 %}
+                                        <li><a href="{% url 'show_category' cpu_slug=item.cpu_slug %}"><i class="fa fa-check-circle"></i>{{ item.title }}</a></li>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Widget-->
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="footer-widget newsletter-widget">
+                                    <h3>Обратная связь</h3>
+                                    <div class="clearfix">
+                                        <p><input type="text" placeholder="Ваше имя"></p>
+                                        <p><input type="text" placeholder="Ваш телефон"></p>
+                                        <p><textarea placeholder="Ваше сообщение"></textarea></p>
+                                        <p><button class="hvr-bounce-to-right" type="submit">Отправить</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!--Footer Bottom-->
+                <div class="footer-bottom">
+                    <div class="auto-container">
+
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-12 col-xs-12"><div class="copyright">Devoloped by <a style="color: #fb4848;" target="_blank" href="https://annasoft.ru">Annasoft</a> | 2022</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </footer>
+        
+        </div>
+        <!--End pagewrapper-->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top"></div>
+
+
+    <script src="{% static 'js/jquery.js' %}"></script> 
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/validate.js' %}"></script>
+    <script src="{% static 'js/revolution.min.js' %}"></script>
+    <script src="{% static 'js/bxslider.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% block custom_scripts %} {% endblock %}
+    </body>
+</html>

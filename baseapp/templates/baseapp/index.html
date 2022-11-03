@@ -1,0 +1,420 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}{% if page.meta_title %}{{ page.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if page.meta_description %}{{ page.meta_description }}{% else %}{% endif %}{% endblock %}
+
+{% block content %}
+
+<!-- Main Slider -->
+<section class="main-slider">
+    
+    <div class="tp-banner-container">
+        <div class="tp-banner" >
+            <ul>
+                
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_2.jpg' %}"  data-saveperformance="off"  data-title="Диагностика">
+                <img src="{% static 'images/banners/banner_2.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                
+                <div class="tp-caption lfl tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="-50"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="grey-title"><h2><strong>Диагностика на современном оборудовании</strong></h2></div></div>
+                
+                
+                <div class="tp-caption lfr tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="50"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+
+                    <div class="white-title">
+                        <h2>Всех марок грузового и коммерческого транспорта</h2>
+                    </div>
+                </div>
+                
+                </li>
+                
+                <li data-transition="slidedown" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_1.jpg' %}"  data-saveperformance="off"  data-title="Ремонт">
+                <img src="{% static 'images/banners/banner_1.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                
+                <div class="tp-caption lft tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="-50"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="grey-title"><h2><strong>Ремонт узлов и агрегатов</strong></h2></div></div>
+                
+                
+                <div class="tp-caption lfb tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="50"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="white-title"><h2>Грузовой, сельхоз, коммерческой и спец техники</h2></div></div>
+                
+                </li>
+                
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_3.jpg' %}"  data-saveperformance="off"  data-title="Тех обслуживание">
+                <img src="{% static 'images/banners/banner_3.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                
+                <div class="tp-caption lfr tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="-50"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="grey-title"><h2><strong>Техническое обслуживание</strong></h2></div></div>
+                
+                
+                <div class="tp-caption lfl tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="50"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"
+                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="white-title"><h2>Обслуживание грузовой, спец техники всех марок</h2></div></div>
+                
+                </li>
+                
+                
+            </ul>
+            
+            <!--<div class="tp-bannertimer"></div>-->
+            
+        </div>
+    </div>
+</section>
+
+<!--Why Us-->
+<section class="why-us">
+    <div class="auto-container">
+        <div class="row clearfix">
+        
+            <!--Text Content-->
+            <div class="col-md-5 col-sm-12 col-xs-12 text-content">
+                <div class="title-box">
+                    <h3>Почему следует обратиться к нам?</h3>
+                </div>
+                <div class="text">
+                    <p>
+                        Добро пожаловать в наш автосервис грузовой, коммерческой и сельскохозяйственной техники. Наша команда профессионалов с многолетним профессиональным стажем специализируемся на ремонте, обслуживании и переоборудовании отечественных и импортных грузовиков, сельскохозяйственной техники, автобусов, спец техники, коммерческого транспорта, прицепов.
+                    </p>
+                </div>
+            </div>
+            
+            <!--Tabs Side-->
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-transport100"></span>
+                            </div>
+                            <h4>Опыт</h4>
+                            <p>Высококвалифицированные специалисты.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-wrench1"></span>
+                            </div>
+                            <h4>Оборудование</h4>
+                            <p>Профессиональное оборудование.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-automobile8"></span>
+                            </div>
+                            <h4>Запчасти</h4>
+                            <p>Запчастеи в наличии.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-transport100"></span>
+                            </div>
+                            <h4>Стоимость</h4>
+                            <p>Цена до кризисная.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>    
+</section>
+
+<!--Featured Services-->
+<section class="featured-services column-view">
+    <div class="auto-container">
+        
+        <div class="sec-title">
+            <h3>Еще немного о нашем сервисе</h3>
+        </div>
+                    
+        <div class="row clearfix">
+            
+            <article class="col-md-4 col-sm-6 col-xs-12 column-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href="#"><img src="{% static 'images/services/3.png' %}" alt="Image" title="Featured Service"></a>
+                    </figure>
+                    <div class="post-content clearfix">
+                        <h3 class="skew-lines">Диагностика</h3>
+                        
+                    </div>
+                    
+                    <div class="overlay-box">
+                        <h3 class="skew-lines">Диагностика</h3>
+                        <div class="text">
+                            <p>Выполняем диагностику узлов и агрегатов среднетоннажной и крупнотоннажной техники. Диагностика позволяет вовремя выявить недостатки в работе узлов и агрегатов, тем самым предотвращая крупные, дорогостоящие поломки узлов и агрегатов.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </article>
+            
+            <article class="col-md-4 col-sm-6 col-xs-12 column-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href="#"><img src="{% static 'images/services/1.png' %}" alt="Image" title="Featured Service"></a>
+                    </figure>
+                    <div class="post-content clearfix">
+                        <h3 class="skew-lines">Переоборудование</h3>
+                    </div>
+                    
+                    <div class="overlay-box">
+                        <h3 class="skew-lines">Переоборудование</h3>
+                        <div class="text">
+                            <p>Переоборудование грузовой, строительной, коммерческой техники. Помощь в регистрации техники после переоборудования. Изменение, замена платформы или других агрегатов на шасси грузовика. Изготовление, увеличение, удлинение грузовой платформы. Установка манипулятора и т.д.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="col-md-4 col-sm-6 col-xs-12 column-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <a href="#"><img src="{% static 'images/services/2.png' %}" alt="Image" title="Featured Service"></a>
+                    </figure>
+                    <div class="post-content clearfix">
+                        <h3 class="skew-lines">Сварочные работы</h3>
+                    </div>
+                    <div class="overlay-box">
+                        <h3 class="skew-lines">Сварочные работы</h3>
+                        <div class="text">
+                            <p>Осуществляем сварочные работы рам грузовой техники, платформ, прицепов. Сварочный ремонт строительной техники, ковшей экскаваторов, кранов, манипуляторов. Правим геометрию рам. Ремонт трещин, разрывов кузова, рамы.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+        
+    </div>    
+</section>
+
+<!--Testimonials-->
+<section class="testimonials-section">
+    <div class="auto-container">
+        
+        <div class="sec-title text-center">
+            <h3>Отзывы</h3>
+        </div>
+                    
+        <div class="testimonials-slider column-carousel three-column">
+            
+            <article class="slide-item">
+                <figure class="image-box"><img src="{% static 'images/comment/1.jpg' %}" alt=""></figure>
+                <div class="slide-text">
+                    <p>“Работают оперативно и качественно.
+                        Вежливый сервис, толковые мастера.
+                        Находятся в центре, а ценник как на отшибе.
+                        Короче 10 из 10”
+                    </p>
+                </div>
+                
+                <div class="info-box clearfix">
+                    <h3>Иван Петров  &ensp; <strong class="rating"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></strong></h3>
+                </div>
+                
+            </article>
+            
+            <article class="slide-item">
+                <figure class="image-box"><img src="{% static 'images/comment/2.jpg' %}" alt=""></figure>
+                <div class="slide-text">
+                    <p>“Отличный сервис! Не дорого, вежливые работники, качественно.”</p>
+                </div>
+                
+                <div class="info-box clearfix">
+                    <h3>Владимир  &ensp; <strong class="rating"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></strong></h3>
+                </div>
+                
+            </article>
+            
+            <article class="slide-item">
+                <figure class="image-box"><img src="{% static 'images/comment/3.jpg' %}" alt=""></figure>
+                <div class="slide-text">
+                    <p>“Отличный автосервис, общительный и вежливый персонал, не дорогие цены. Остался доволен. Рекомендую.”</p>
+                </div>
+                
+                <div class="info-box clearfix">
+                    <h3>Василий Петрович  &ensp; <strong class="rating"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></strong></h3>
+                </div>
+                
+            </article>
+            
+            <article class="slide-item">
+                <figure class="image-box"><img src="{% static 'images/comment/4.jpg' %}" alt=""></figure>
+                <div class="slide-text">
+                    <p>“Сделали все по уму. Все что просил. Без навязывание своих услуг.
+                        На бесплатной диагностике ходовки все рассказали и посчитали стоимость работ, без расходников.
+                        Расположен удобно, подъехать можно с дороги с двух сторон.”
+                    </p>
+                </div>
+                
+                <div class="info-box clearfix">
+                    <h3>Владимир Кретов  &ensp; <strong class="rating"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></strong></h3>
+                </div>
+                
+            </article>
+            
+            <article class="slide-item">
+                <figure class="image-box"><img src="{% static 'images/comment/5.jpg' %}" alt=""></figure>
+                <div class="slide-text">
+                    <p>“Очень хороший автосервис. Профессионалы своего дела, лишнего не предлагают. Цены адекватные. Удобное расположение. Рекомендую.”</p>
+                </div>
+                
+                <div class="info-box clearfix">
+                    <h3>Игорь.  &ensp; <strong class="rating"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></strong></h3>
+                </div>
+                
+            </article>
+            
+            <article class="slide-item">
+                <figure class="image-box"><img src="{% static 'images/comment/6.jpg' %}" alt=""></figure>
+                <div class="slide-text">
+                    <p>“Из всех автоцентров выбрали автотрансремонт, хоть нам и далековато ездить. Ориентированы на клиента, всё объяснят, лишних услуг не навязывают, всё, по существу. Есть своя служба подбора запчастей, что мне, например, удобно.”</p>
+                </div>
+                
+                <div class="info-box clearfix">
+                    <h3>Геннадий К.  &ensp; <strong class="rating"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></strong></h3>
+                </div>
+                
+            </article>
+        </div>
+        
+    </div>    
+</section>
+
+<!--Intro Section-->
+<section class="intro-section">
+    <div class="auto-container">
+        <div class="border clearfix">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                <h3>Укажите вопрос по которому хотите проконсультироваться, мы с Вами свяжемся в течении 5 минут.</h3>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 text-right">
+                <a href="{% url 'show_contacts' %}" class="theme-btn dark-btn style-two"><span class="fa fa-angle-right"></span> Связаться</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sidebar Page -->
+<div class="sidebar-page">
+    <div class="auto-container">
+        <div class="row clearfix">
+           
+
+            <!-- Left Content -->
+            <section class="left-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                <!-- Post -->
+                <article class="post wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="post-image">
+                        <img class="img-responsive" src="{% static 'images/banners/field_service.jpg' %}" alt="">
+                        
+                    </div>
+                    <div class="content-box">
+                        <h2 class="post-title">Выездной сервис</h2>
+                        <div class="post-text">
+                            Наша команда выездного сервиса всегда придет Вам на помощь в сложной дорожной ситуации. Проведём диагностику электрооборудования, топливной системы, двигателя, трансмиссии.  Так же проводим ремонт и замену сцепления, ступиц, подшипников, генераторов, стартеров в Орле и Орловской области.
+                            Так же осуществляем следующие услуги выездного сервиса:
+                            <ul>
+                                <li><i class="fa fa-check-circle as-check"></i>Ремонт автоэлектрики грузовых автомобилей.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Компьютерная диагностика коммерческого автотранспорта.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Ремонт двигателя, замена агрегатов и навесного оборудования.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Ремонт ходовой и тормозной системы любой сложности.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Замена ТНВД.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Прокачка топливной системы.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Ремонт, диагностика, снятие, установка стартеров и генераторов.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Проверка состояния аккумуляторов и его подзарядка от внешнего источника. (“прикурить” автомобиль)</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Отогрев двигателя.</li>
+                                <li><i class="fa fa-check-circle as-check"></i>Доставка запчастей.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

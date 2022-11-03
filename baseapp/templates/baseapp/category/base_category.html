@@ -1,0 +1,26 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}{% if category.meta_name %}{{ category.meta_name }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if category.meta_keywords %}{{ category.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if category.meta_description %}{{ category.meta_description }}{% else %}{% endif %}{% endblock %}
+
+{% block content %}
+<section class="page-banner" style="background-image:url({% static 'images/banners/background_banner.jpg' %});">
+    <div class="auto-container">
+        <div class="page-title"><h1>{{ category.title }}</h1></div>
+        <div class="bread-crumb text-right">
+            <span class="current">{{ category.title }}</span>
+        </div>
+    </div>
+</section>
+
+<div class="sidebar-page">
+    <div class="auto-container">
+{% block category_content %}
+{% endblock %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block title %}{% if category.meta_name %}{{ category.meta_name }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if category.meta_keywords %}{{ category.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if category.meta_description %}{{ category.meta_description }}{% else %}{% endif %}{% endblock %}
+
+{% block category_content %}
+<div class="row clearfix">
+    <section class="left-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <article class="post post-detail">
+            <div class="post-image wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <img class="img-responsive" src="{% if category.picture %}{{ category.picture.url }}{% endif %}" alt="">
+            </div>
+            {% if category.description %}
+            <div class="content-box">
+                <div class="post-data">
+                    {{ category.description|safe  }}
+                </div>
+            </div>
+            {% endif %}
+        </article>
+    </section>
+</div>
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+{% endblock %}
+            

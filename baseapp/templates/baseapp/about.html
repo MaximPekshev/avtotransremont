@@ -1,0 +1,167 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}{% if page.meta_title %}{{ page.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if page.meta_description %}{{ page.meta_description }}{% else %}{% endif %}{% endblock %}
+
+
+{% block content %}
+<section class="page-banner" style="background-image:url({% static 'images/banners/background_banner.jpg' %});">
+    <div class="auto-container">
+       <div class="page-title"><h1>О нас</h1></div>
+       <div class="bread-crumb text-right">
+           <span class="current">О нас</span>
+       </div>
+   </div>
+</section>
+
+<section class="tabs-section">
+    <div class="auto-container">
+        <div class="row">
+            
+            <div class="tabs-box clearfix">
+                
+                <!--Content Side-->
+                <div class="col-md-12 col-sm-12 col-xs-12 tabs-content clearfix">
+                    
+                    <!--Tab / Active tab-->
+                    <div class="tab active-tab" id="tab-one">
+                        {% comment %} <div class="tab-title">
+                            <h2>Repair and inspection service</h2>
+                            <h3>Customers car repairing</h3>
+                        </div> {% endcomment %}
+                        <div class="text">
+                            Грузовой автосервис «АвтоТрансРемонт» - многопрофильный универсальный техцентр полного цикла. Наша компания специализируется
+                            на диагностике, техническом обслуживании и ремонте коммерческих грузовиков КАМАЗ, МАЗ, УРАЛ, ПАЗ, ГАЗ и других марок коммерческого
+                            транспорта, ремонте автофургонов, фургонов, будок, бортовых платформ. Мы работаем как с юридическими, так и с физическими лицами.
+                            Предлагаем Вам удобное расположение в городе Орёл.    
+                        </div>
+                        <div class="text">
+                            Для каждой компании, осуществляющие перевозки, ремонт грузовых автомобилей КАМАЗ, МАЗ, ГАЗ, Урал насущный вопрос. Наш автоцентр 
+                            занимается ремонтом грузовиков, а также на постоянной договорной основе обслуживаем большие автопарки грузовых автомобилей Орла
+                            и Орловской области. Мы имеем большой опыт ремонтных работ, подобрали штат профессиональных специалистов, наработали и освоили
+                            уникальные технологии ремонта.    
+                        </div>
+                        <h2 style="margin-bottom: 30px;">Перечень производимых услуг:</h2>
+                        <div class="row list clearfix">
+                            <ul class="col-md-6 col-sm-12 col-xs-12">
+                                <li>Регламентные работы по всем видам технического обслуживания</li>
+                                <li>Диагностика, ремонт и замена двигателя</li>
+                                <li>Диагностика, ремонт и замена топливной аппаратуры</li>
+                                <li>Диагностика, ремонт и замена узловs и агрегатов трансмиссии</li>
+                                <li>Диагностика и ремонт тормозной системы</li>
+                            </ul>
+                            <ul class="col-md-6 col-sm-12 col-xs-12">
+                                <li>Диагностика и ремонт узлов и деталей рулевого управления</li>
+                                <li>Диагностика и ремонт узлов и деталей шасси</li>
+                                <li>Диагностика, ремонт электрических систем и электрооборудования</li>
+                                <li>Диагностика и ремонт автономных отопителей</li>
+                                <li>Кузовной ремонт</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<section class="why-us">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-content">
+                <div class="title-box">
+                    <h3>
+                        Грузовой автосервис «АвтоТрансРемонт» - Ваш надежный партнер и помощник! Предоставьте нам заботу о техническом состоянии 
+                        Ваших автомобилей, и мы гарантируем Вам бесперебойную работу Вашего автопарка! 
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+<!--Why Us-->
+<section class="why-us">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-md-5 col-sm-12 col-xs-12 text-content">
+                <div class="title-box">
+                    <h3>Почему следует обратиться к нам?</h3>
+                </div>
+                <div class="text">
+                    <p>
+                        Добро пожаловать в наш автосервис грузовой, коммерческой и сельскохозяйственной техники. Наша команда профессионалов с многолетним профессиональным стажем специализируемся на ремонте, обслуживании и переоборудовании отечественных и импортных грузовиков, сельскохозяйственной техники, автобусов, спец техники, коммерческого транспорта, прицепов.
+                    </p>
+                </div>
+            </div>
+            
+            <!--Tabs Side-->
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-transport100"></span>
+                            </div>
+                            <h4>Опыт</h4>
+                            <p>Высококвалифицированные специалисты.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-wrench1"></span>
+                            </div>
+                            <h4>Оборудование</h4>
+                            <p>Профессиональное оборудование.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-automobile8"></span>
+                            </div>
+                            <h4>Запчасти</h4>
+                            <p>Запчастеи в наличии.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp box" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <a class="tab-link" onclick="PreventDefault();">
+                            <div class="icon">
+                                <span class="flaticon-transport100"></span>
+                            </div>
+                            <h4>Стоимость</h4>
+                            <p>Цена до кризисная.</p>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>    
+</section>
+
+<!--Intro Section-->
+<section class="intro-section" style="margin-bottom: 30px;">
+    <div class="auto-container">
+        <div class="border clearfix">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                <h3>Есть вопросы? Свяжитесь с нами.</h3>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 text-right">
+                <a href="{% url 'show_contacts' %}" class="theme-btn dark-btn style-two"><span class="fa fa-angle-right"></span> Контакты</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
