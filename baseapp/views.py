@@ -22,8 +22,7 @@ def show_index_page(request):
 def show_category(request, cpu_slug):
 
     category = get_object_or_404(Category, cpu_slug=cpu_slug)
-    template_name = category.cpu_slug + '.html'
-
+    
     context = {
         'categories': Category.objects.all(),
         'categories_1': Category.objects.all()[:5],
@@ -31,7 +30,7 @@ def show_category(request, cpu_slug):
         'category': category,
     }
 
-    return render(request, 'baseapp/category/' + template_name, context)
+    return render(request, 'baseapp/category.html', context)
 
 def show_contacts(request):
 
