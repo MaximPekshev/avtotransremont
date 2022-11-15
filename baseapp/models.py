@@ -35,54 +35,24 @@ class Category(models.Model):
     def save(self, *args, **kwargs):
         
         self.cpu_slug = '{}'.format(slugify(self.title))
-#         if not os.path.exists('baseapp/templates/baseapp/category/' + self.cpu_slug + '.html'):
-#             file_name = 'baseapp/templates/baseapp/category/' + self.cpu_slug + '.html'
-#             file_content = """
-# {% extends 'baseapp/category/base_category.html' %}
-
-# {% load static %}
-
-# {% block title %}{% if category.meta_name %}{{ category.meta_name }}{% else %}{% endif %}{% endblock %}
-# {% block keywords %}{% if category.meta_keywords %}{{ category.meta_keywords }}{% else %}{% endif %}{% endblock %}
-# {% block description %}{% if category.meta_description %}{{ category.meta_description }}{% else %}{% endif %}{% endblock %}
-
-# {% block category_content %}
-# <div class="row clearfix">
-#     <section class="left-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
-#         <article class="post post-detail">
-#             <div class="post-image wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-#                 <img class="img-responsive" src="{% if category.picture %}{{ category.picture.url }}{% endif %}" alt="">
-#             </div>
-#             {% if category.description %}
-#             <div class="content-box">
-#                 <div class="post-data">
-#                     {{ category.description|safe  }}
-#                 </div>
-#             </div>
-#             {% endif %}
-#         </article>
-#     </section>
-# </div>
-# {% endblock %}
-
-# {% block content %}
-# {{ block.super }}
-# {% endblock %}
-#             """
-#             category_file = open(file_name, "+w")
-#             category_file.write(file_content)
-#             category_file.close()
         super(Category, self).save(*args, **kwargs)
-    
-    # def delete(self, *args, **kwargs):
-    #     template = os.path.exists('baseapp/templates/baseapp/category/' + self.cpu_slug + '.html')
-    #     if template:
-    #         os.remove('baseapp/templates/baseapp/category/' + self.cpu_slug + '.html')
-    #     super(Category, self).delete(*args, **kwargs)
-
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
+
+class Staff(models.Model):
+    
+    title 				= models.CharField(max_length = 150, verbose_name='Наименование')
+    speciality 			= models.CharField(max_length=150, verbose_name='Специальность', blank=True, null=True)
+    picture				= models.ImageField(upload_to=get_image_title_name, verbose_name='Изображение 269x230', default=None, null=True, blank=True)  
+    
+    def __str__(self):
+        
+        return self.title
+
+    class Meta:
+        verbose_name = 'Персонал'
+        verbose_name_plural = 'Персонал'
 
 class Page(models.Model):
 

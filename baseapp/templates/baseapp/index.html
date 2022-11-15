@@ -14,6 +14,83 @@
     <div class="tp-banner-container">
         <div class="tp-banner" >
             <ul>
+
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_4.jpg' %}"  data-saveperformance="off"  data-title="Автотрансремонт">
+                    <img src="{% static 'images/banners/banner_4.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    
+                    {% comment %} <div class="tp-caption lfl tp-resizeme"
+                    data-x="center" data-hoffset="0"
+                    data-y="center" data-voffset="-50"
+                    data-speed="1500"
+                    data-start="500"
+                    data-easing="easeOutExpo"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn"
+                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="grey-title"><h2><strong>Грузовой автосервис</strong></h2></div></div>
+                     {% endcomment %}
+                    
+                    {% comment %} <div class="tp-caption lfr tp-resizeme"
+                    data-x="center" data-hoffset="0"
+                    data-y="center" data-voffset="50"
+                    data-speed="1500"
+                    data-start="500"
+                    data-easing="easeOutExpo"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn"
+                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+    
+                        <div class="white-title">
+                            <h2>АВТОТРАНРЕМОНТ</h2>
+                        </div>
+                    </div> {% endcomment %}
+                    
+                </li>
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_5.jpg' %}"  data-saveperformance="off"  data-title="Запчасти">
+                    <img src="{% static 'images/banners/banner_5.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    
+                    <div class="tp-caption lfl tp-resizeme"
+                    data-x="center" data-hoffset="0"
+                    data-y="center" data-voffset="-50"
+                    data-speed="1500"
+                    data-start="500"
+                    data-easing="easeOutExpo"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn"
+                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="grey-title"><h2><strong>Запчасти в наличии</strong></h2></div></div>
+                    
+                    
+                    <div class="tp-caption lfr tp-resizeme"
+                    data-x="center" data-hoffset="0"
+                    data-y="center" data-voffset="50"
+                    data-speed="1500"
+                    data-start="500"
+                    data-easing="easeOutExpo"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn"
+                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+    
+                        <div class="white-title">
+                            <h2>На отечественную технику</h2>
+                        </div>
+                    </div>
+                    
+                </li>
                 
                 <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_2.jpg' %}"  data-saveperformance="off"  data-title="Диагностика">
                 <img src="{% static 'images/banners/banner_2.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
@@ -379,7 +456,7 @@
 </section>
 
 <!-- Sidebar Page -->
-<div class="sidebar-page">
+<div class="sidebar-page" style="padding-bottom: 0px;">
     <div class="auto-container">
         <div class="row clearfix">
            
@@ -417,4 +494,28 @@
         </div>
     </div>
 </div>
+{% if our_team %}
+<section class="team-section column-view">
+    <div class="auto-container">
+        <div class="sec-title">
+            <h3>Наша команда</h3>
+        </div>
+        <div class="column-carousel four-column clearfix">
+            {% for item in our_team %}
+            <article class="column-box team-box">
+                <div class="inner-box hvr-float-shadow">
+                    <figure class="image">
+                        <a onclick="PreventDefault();"><img src="{{ item.picture.url }}" title="{% if item.title %}{{ item.title }}{% endif %}"></a>
+                    </figure>
+                    <div class="post-content text-center clearfix">
+                        <h3>{% if item.title %}{{ item.title }}{% endif %}</h3>
+                        <h5 class="occupation">{% if item.speciality %}{{ item.speciality }}{% endif %}</h5>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>    
+</section>
+{% endif %}
 {% endblock %}

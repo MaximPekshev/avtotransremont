@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from baseapp.models import Category, Page
+from baseapp.models import Category, Page, Staff
 from django.shortcuts import get_object_or_404
 
 def show_index_page(request):
@@ -13,7 +13,8 @@ def show_index_page(request):
     context = {
         'categories' : Category.objects.filter(active=True),
         'categories_1': Category.objects.all()[:5],
-        'categories_2': Category.objects.all()[6:],
+        'categories_2': Category.objects.all()[5:10],
+        'our_team': Staff.objects.all(),
         'page': page,
     }
 
@@ -26,7 +27,7 @@ def show_category(request, cpu_slug):
     context = {
         'categories': Category.objects.all(),
         'categories_1': Category.objects.all()[:5],
-        'categories_2': Category.objects.all()[6:],
+        'categories_2': Category.objects.all()[5:10],
         'category': category,
     }
 
@@ -43,7 +44,7 @@ def show_contacts(request):
     context = {
         'categories' : Category.objects.filter(active=True),
         'categories_1': Category.objects.all()[:5],
-        'categories_2': Category.objects.all()[6:],
+        'categories_2': Category.objects.all()[5:10],
         'page': page,
     }
 
@@ -61,7 +62,7 @@ def show_about_us(request):
     context = {
         'categories' : Category.objects.filter(active=True),
         'categories_1': Category.objects.all()[:5],
-        'categories_2': Category.objects.all()[6:],
+        'categories_2': Category.objects.all()[5:10],
         'page': page,
     }
 
