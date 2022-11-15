@@ -9,5 +9,4 @@ tmp
 .env
 files
 venv
-static
-baseapp/templates/baseapp/category
+/static/
