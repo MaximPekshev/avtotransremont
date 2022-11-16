@@ -22,27 +22,27 @@
             
             <!-- Left Content -->
             <section class="left-content col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                
-                
+            
                 <!-- Contact Form -->
                 <div class="contact-form">
                         
                     <div class="sec-title"><h3 class="skew-lines">Свяжитесь с нами</h3></div>
                     
                     <!--Contact Form-->
-                    <div>
+                    <form id="contactForm" action="{% url 'send_contact_form' %}"  method="POST">
+                        {% csrf_token %}
                         <div class="row clearfix">
                             
                             <div class="col-md-5 col-sm-12 col-xs-12">
                                 
                                 <div class="form-group">
                                     <label class="form-label">Ваше имя</label>
-                                    <input type="text" name="username" value="" placeholder="Введите ваше имя">
+                                    {{ contact_form.input_name }}
                                 </div>
                                 
                                 <div class="form-group">
                                     <label class="form-label">Телефон</label>
-                                    <input type="text" name="phone" value="" placeholder="Введите Ваш телефон">
+                                    {{ contact_form.input_phone }}
                                 </div>
                                 
                                 <div class="clearfix"></div>
@@ -53,18 +53,17 @@
                                 
                                 <div class="form-group">
                                     <label class="form-label">Сообщение</label>
-                                    <textarea name="message" placeholder="Место для вашего сообщения"></textarea>
+                                    {{ contact_form.input_comment }}
                                 </div>
                                 
                             </div>
-                            
+                            {{ contact_form.captcha }}
                         </div>
                         
                         <div class="form-group text-right">
                             <button  class="theme-btn dark-btn hvr-bounce-to-right"><span class="fa fa-envelope"></span>Отправить</button>
                         </div>
-                        
-                    </div>
+                    </form>
                         
                 </div>
                 
@@ -81,8 +80,8 @@
                         {% comment %} <div class="text"></div> {% endcomment %}
                         <ul class="info">
                             <li><strong>Телефон</strong><a href="tel:+79192692177">+7(919) 269 2177</a></li>
-                            <li><strong>Телефон</strong><a href="tel:+79193051088">+7(919) 305 1088</a></li>
-                            <li><strong>Телефон</strong><a href="tel:+79197484001">+7(919) 748 4001</a></li>
+                            <li><strong>Телефон</strong><a href="tel:+79193051088">+7(910) 305 1088</a></li>
+                            <li><strong>Телефон</strong><a href="tel:+79197484001">+7(910) 748 4001</a></li>
                             <li><strong>Телефон</strong><a href="tel:+74862484001">+7(4862) 48 40 01</a></li>
                             <li><strong>Email</strong> <a href="mailto:avtotransremont@yandex.ru">avtotransremont@yandex.ru</a></li>        
                             {% comment %} <li><strong>Website</strong> <a href="https://autotransremont.ru">autotransremont.ru</a></li> {% endcomment %}

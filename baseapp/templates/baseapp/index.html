@@ -16,42 +16,7 @@
             <ul>
 
                 <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_4.jpg' %}"  data-saveperformance="off"  data-title="Автотрансремонт">
-                    <img src="{% static 'images/banners/banner_4.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
-                    
-                    {% comment %} <div class="tp-caption lfl tp-resizeme"
-                    data-x="center" data-hoffset="0"
-                    data-y="center" data-voffset="-50"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="grey-title"><h2><strong>Грузовой автосервис</strong></h2></div></div>
-                     {% endcomment %}
-                    
-                    {% comment %} <div class="tp-caption lfr tp-resizeme"
-                    data-x="center" data-hoffset="0"
-                    data-y="center" data-voffset="50"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
-    
-                        <div class="white-title">
-                            <h2>АВТОТРАНРЕМОНТ</h2>
-                        </div>
-                    </div> {% endcomment %}
-                    
+                    <img src="{% static 'images/banners/banner_4.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">   
                 </li>
                 <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/banners/banner_5.jpg' %}"  data-saveperformance="off"  data-title="Запчасти">
                     <img src="{% static 'images/banners/banner_5.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
@@ -505,7 +470,7 @@
             <article class="column-box team-box">
                 <div class="inner-box hvr-float-shadow">
                     <figure class="image">
-                        <a onclick="PreventDefault();"><img src="{{ item.picture.url }}" title="{% if item.title %}{{ item.title }}{% endif %}"></a>
+                        <a onclick="PreventDefault();"><img src="{% if item.title %}{{ item.picture.url }}{% endif %}" title="{% if item.title %}{{ item.title }}{% endif %}"></a>
                     </figure>
                     <div class="post-content text-center clearfix">
                         <h3>{% if item.title %}{{ item.title }}{% endif %}</h3>

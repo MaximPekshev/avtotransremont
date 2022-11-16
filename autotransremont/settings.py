@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'baseapp',
     'ckeditor',
     'ckeditor_uploader',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +76,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
 
 LANGUAGE_CODE = 'ru-RU'
 

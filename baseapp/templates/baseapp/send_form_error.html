@@ -1,0 +1,32 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block title %}{% if page.meta_title %}{{ page.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if page.meta_description %}{{ page.meta_description }}{% else %}{% endif %}{% endblock %}
+
+{% block content %}
+<section class="tabs-section" style="margin-bottom: 30px;">
+    <div class="auto-container">
+        <div class="row">
+            
+            <div class="tabs-box clearfix">
+                
+                <!--Buttons Side-->
+                <div class="col-md-12 col-sm-12 col-xs-12 tabs-content clearfix">
+                    	
+                    <!--Tab / Active tab-->
+                    <div class="tab active-tab" id="tab-one">
+                        <div class="tab-title" align="center">
+                            <h2>При отправке запроса произошла ошибка</h2>
+                            <h3>Попробуйте отправить запрос позже</h3>
+                            <a style="margin-top: 20px;" href="{% url 'show_contacts' %}" class="theme-btn dark-btn style-two"><span class="fa fa-angle-right"></span> Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+{% endblock %}

@@ -58,7 +58,7 @@
                                     <li>
                                         <div class="clearfix ">
                                             <img src="{% static 'images/icons/header-timer.png' %}" alt="">
-                                            <p>г. Орёл Новосильское<br> шоссе 11 офис 1</p>
+                                            <p>г. Орёл, Новосильское<br> шоссе 11, офис 1</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -133,8 +133,8 @@
                                     <ul class="info">
                                         <li><strong>Email</strong> <a href="mailto:avtotransremont@yandex.ru">avtotransremont@yandex.ru</a></li>        
                                         <li><strong>Телефон</strong><a href="tel:+79192692177">+7(919) 269 2177</a></li>
-                                        <li><strong>Телефон</strong><a href="tel:+79193051088">+7(919) 305 1088</a></li>
-                                        <li><strong>Телефон</strong><a href="tel:+79197484001">+7(919) 748 4001</a></li>
+                                        <li><strong>Телефон</strong><a href="tel:+79193051088">+7(910) 305 1088</a></li>
+                                        <li><strong>Телефон</strong><a href="tel:+79197484001">+7(910) 748 4001</a></li>
                                         <li><strong>Телефон</strong><a href="tel:+74862484001">+7(4862) 48 40 01</a></li>
                                     </ul>
                                 </div>
@@ -172,12 +172,14 @@
                             <div class="col-md-3 col-sm-12 col-xs-12">
                                 <div class="footer-widget newsletter-widget">
                                     <h3>Обратная связь</h3>
-                                    <div class="clearfix">
-                                        <p><input type="text" placeholder="Ваше имя"></p>
-                                        <p><input type="text" placeholder="Ваш телефон"></p>
-                                        <p><textarea placeholder="Ваше сообщение"></textarea></p>
+                                    <form id="contactForm" class="clearfix" action="{% url 'send_contact_form' %}"  method="POST">
+                                        {% csrf_token %}
+                                        <p>{{ contact_form.input_name }}</p>
+                                        <p>{{ contact_form.input_phone }}</p>
+                                        <p>{{ contact_form.input_comment }}</p>
+                                        {{ contact_form.captcha }}
                                         <p><button class="hvr-bounce-to-right" type="submit">Отправить</button></p>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             
@@ -214,6 +216,16 @@
     <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
     <script src="{% static 'js/wow.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
+    <script>
+		function inputFilter(){
+			if (event.keyCode < 48 || event.keyCode > 57) {
+				if (event.keyCode != 46){
+					event.returnValue= false;
+				}
+			}
+		};
+	</script>
     {% block custom_scripts %} {% endblock %}
+
     </body>
 </html>
