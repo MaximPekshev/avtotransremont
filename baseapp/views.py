@@ -126,7 +126,7 @@ def send_mail(first_name, phone, comment):
 
 	HOST = "mail.hosting.reg.ru"
 	sender_email = config('MAIL_USER')
-	receiver_email = ['info@annasoft.ru']
+	receiver_email = [config('MAIL_RECEIVER')]
 	password = config('MAIL_PASSWORD')
 
 	message = MIMEMultipart("alternative")
