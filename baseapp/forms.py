@@ -30,4 +30,8 @@ class ContactForm(forms.Form):
 			'autocomplete': 'off',
 			'rows': '4',
 		}))
+	input_checkbox = forms.BooleanField(required=True, widget=forms.CheckboxInput(attrs={
+			'id': 'input_checkbox',
+			'autocomplete': 'off',
+		}))
 	captcha = ReCaptchaField(widget=ReCaptchaV2Invisible)

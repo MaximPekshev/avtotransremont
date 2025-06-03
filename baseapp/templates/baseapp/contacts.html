@@ -59,9 +59,14 @@
                             </div>
                             {{ contact_form.captcha }}
                         </div>
-                        
-                        <div class="form-group text-right">
-                            <button  class="theme-btn dark-btn hvr-bounce-to-right"><span class="fa fa-envelope"></span>Отправить</button>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="text-left col-xs-12 col-md-6">
+                                {{ contact_form.input_checkbox }}
+                                <label for="input_checkbox" class="input-checkbox-label form-label">Я согласен на обработку персональных данных</label>
+                            </div>
+                            <div class=" text-right col-xs-12 col-md-6">
+                                <button  class="theme-btn dark-btn hvr-bounce-to-right"><span class="fa fa-envelope"></span>Отправить</button>
+                            </div>
                         </div>
                     </form>
                         

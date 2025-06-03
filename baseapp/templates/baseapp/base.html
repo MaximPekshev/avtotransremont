@@ -11,6 +11,7 @@
         <link href="{% static 'css/revolution-slider.css' %}" rel="stylesheet">
         <link href="{% static 'css/owl.css' %}" rel="stylesheet">
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/as.css' %}" rel="stylesheet">
         <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
         <!-- Responsive -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -195,8 +196,20 @@
                                         <p>{{ contact_form.input_name }}</p>
                                         <p>{{ contact_form.input_phone }}</p>
                                         <p>{{ contact_form.input_comment }}</p>
+                                        <p>
+                                            <div class="row align-items-center">
+                                                <div class="col-xs-2">
+                                                    {{ contact_form.input_checkbox }}
+                                                </div>
+                                                <div class="col-xs-10" style="padding: 0px;">
+                                                    <p style="font-size: 14px; line-height: 1em; color: white;">Я согласен на обработку персональных данных</p>
+                                                </div>
+                                            </div>
+                                        </p>
                                         {{ contact_form.captcha }}
-                                        <p><button class="hvr-bounce-to-right" type="submit">Отправить</button></p>
+                                        <p>
+                                            <button class="hvr-bounce-to-right" type="submit">Отправить</button>
+                                        </p>
                                     </form>
                                 </div>
                             </div>

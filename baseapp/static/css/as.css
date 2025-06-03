@@ -1,0 +1,10 @@
+.input-checkbox-label {
+    padding-left: 10px;
+}
+
+@media (max-width: 443px) {
+    .input-checkbox-label {
+        padding-left: 0;
+        font-size: 12px;
+    }
+}
